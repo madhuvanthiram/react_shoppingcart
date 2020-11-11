@@ -1,0 +1,22 @@
+body{
+  font-size:10px;
+  font-family:sans-serif, 'Times New Roman', Times, serif
+}
+
+
+ul.items {
+ 
+  list-style-type: none;
+ 
+}
+
+img{
+  width: 20%;
+  
+}
+table tr td
+{
+  width: 40%;
+  padding:5px;
+}
+
