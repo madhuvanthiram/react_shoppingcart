@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import image1 from "./pic1.jpg";
-import image2 from "./pic2.png";
-import image3 from "./pic3.jpg";
 import "./Shopping.css";
 import Badge from 'react-bootstrap/Badge'
 
@@ -18,7 +15,6 @@ class ShoppingCart extends Component {
     Shoppinglist: [
       {
         id: 1,
-        img: image1,
         name: "Item1",
         price: "10",
         Quantity: 0,
@@ -26,7 +22,6 @@ class ShoppingCart extends Component {
       },
       {
         id: 2,
-        img: image2,
         name: "Item2",
         price: "15",
         Quantity: 0,
@@ -35,7 +30,6 @@ class ShoppingCart extends Component {
 
       {
         id: 3,
-        img:image3,
         name: "Item3",
         price: "26",
         Quantity: 0,
