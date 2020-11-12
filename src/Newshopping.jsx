@@ -6,11 +6,12 @@ import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Shopping.css";
+import Badge from 'react-bootstrap/Badge'
 
 class Newshopping extends Component {
 
 state = {
-    setShow: false,
+   // setShow: false,
     showcart: false,
     Amounttopay:0,
  
@@ -18,17 +19,16 @@ state = {
   };
   
   handleCloseModal() {
-   // console.log("inside close");
   
-    this.setState({ setShow: false });
+    
+    this.props.hideModal();
+  
   }
 
-  handleOpenModal() {
-    this.setState({ setShow: true });
-  }
+ 
 
   handleClickIncrement(index) {
-   // console.log("inside handleclikincremnet");
+   
     const listitemcart = this.props.myarray;
 
      listitemcart[index].Quantity += 1;
@@ -45,7 +45,7 @@ state = {
   handledelete(index) {
    
  const listitemcart = this.props.myarray;
-console.log(listitemcart[index].inCart)
+
 listitemcart[index].inCart=false;
     listitemcart.splice(index, 1);
   
@@ -62,7 +62,7 @@ listitemcart[index].inCart=false;
 
 
   handleClickDecrement(index) {
-    //console.log("inside handleclikincremnet");
+   
     const listitemcart = this.props.myarray;
 if(listitemcart[index].Quantity>0)
 {
@@ -82,17 +82,15 @@ if(listitemcart[index].Quantity>0)
   render() {
    
 
-   // console.log("inside render")
-    const { myarray } = this.props;
-  
    
+    const { myarray } = this.props;
+    const {setShowmodal}=this.props;
+  
     let amountToPay = 0;
     for (let i=0; i<this.props.myarray.length; i++) {
       amountToPay += this.props.myarray[i].price *  this.props.myarray[i].Quantity;
     }
  
-
-    //console.log(myarray);
 
     const newmodal = myarray.map((item, index) => {
       return (
@@ -129,9 +127,8 @@ if(listitemcart[index].Quantity>0)
                   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
                 ></link>
                 <span style={{ fontSize: 12 }} className="btn btn-danger" onClick={this.handledelete.bind(this, index)}>
-                  <i className="fa fa-trash-o"></i>
-                </span>
-               
+                  <i className="fa fa-trash-o" aria-hidden="true"/>
+                </span> 
                
               </td>
             </tr>
@@ -141,22 +138,12 @@ if(listitemcart[index].Quantity>0)
     });
 
     return (
-      <div> 
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        ></link>
- <div className="col-md-9">
-        <span  style={{ fontSize: 30 }} onClick={this.handleOpenModal.bind(this)} >
-         <i className="fa fa-shopping-cart fa-lg m-2"> </i>
-        
-        </span>
-        </div>
-         
+    
+         <div>
 
         <Modal
         size='lg'
-          show={this.state.setShow}
+          show={setShowmodal}
           onHide={this.handleCloseModal.bind(this)}
         
         >
@@ -165,9 +152,9 @@ if(listitemcart[index].Quantity>0)
           </ModalHeader>
           <ModalBody>{newmodal}</ModalBody>
           <ModalFooter>
-            <button onClick={this.handleCloseModal.bind(this)}>OK</button>
+          <button className="btn btn-secondary" onClick={this.handleCloseModal.bind(this)}>Ok</button>
+            <h1> <Badge variant="info"> TotalAmount:{amountToPay}S$</Badge> </h1>
           
-            <p><b>TotalAmount:{amountToPay}S$</b></p>
           </ModalFooter>
         </Modal>
       </div>

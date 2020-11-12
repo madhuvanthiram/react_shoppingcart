@@ -1,20 +1,24 @@
-body{
-  font-size:5px;
-  font-family:'Segoe UI';
 
-}
 
-table {
+table  {
 
-  width: 50%;
-  font-size:15px;
-  margin:30px;
+ 
+
+  display: flex;
+ 
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+ color:black;
+
+  
 }
 
 th, td {
  
   text-align: left;
-  padding: 10px;
+  padding: 20px;
+ 
 }
 
 
