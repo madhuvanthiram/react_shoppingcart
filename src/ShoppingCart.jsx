@@ -103,9 +103,9 @@ class ShoppingCart extends Component {
       <div >
      
         {this.state.showcomp ? passcmp : null}
-        <div className="col-md-10">
+        <div className="col-lg:20">
        {this.state.count===0?
-    <Badge variant="info"> <b>No items in cart</b></Badge> : <Badge variant="primary">{this.state.count} Items</Badge>}
+   <h1> <Badge variant="info"> 0 Item</Badge> </h1>: <h2><Badge variant="primary">{this.state.count} Items</Badge></h2>}
     
       </div>
         <h1>{listitems}</h1>
