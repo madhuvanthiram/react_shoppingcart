@@ -3,6 +3,7 @@ import image1 from "./pic1.jpg";
 import image2 from "./pic2.png";
 import image3 from "./pic3.jpg";
 import "./Shopping.css";
+import Badge from 'react-bootstrap/Badge'
 
 import Newshopping from "./Newshopping";
 
@@ -27,7 +28,7 @@ class ShoppingCart extends Component {
         id: 2,
         img: image2,
         name: "Item2",
-        price: "5",
+        price: "15",
         Quantity: 0,
         inCart: false,
       },
@@ -36,7 +37,7 @@ class ShoppingCart extends Component {
         id: 3,
         img:image3,
         name: "Item3",
-        price: "6",
+        price: "26",
         Quantity: 0,
         inCart: false,
       },
@@ -48,8 +49,6 @@ class ShoppingCart extends Component {
 
   AddToCart(id,index) {
     console.log("inside addto");
-
-
     this.setState({ showcomp: true });
     console.log(this.state.showcomp);
     this.setState({ count: this.state.count + 1 });
@@ -78,32 +77,37 @@ class ShoppingCart extends Component {
     const listitems = this.state.Shoppinglist.map((row, index) => {
       return (
         <div key={row.id}>
-          <ul className="items">
-            <li>
-              <img src={row.img} />
-            </li>
-            <li>{row.name}</li>
-            <li>{row.price} SGD</li>
-            <li>{row.inCart}</li>
-
-            <button className="btn btn-primary" onClick={this.AddToCart.bind(this, row.id,index)}   disabled={row.inCart}>
+  
+           <table className="items">
+             <tr>
+               <td>{row.name}</td>
+               <td>{row.price}SGD</td>
+               <td>{row.inCart}</td>
+               <td>   <button className="btn btn-primary m-2" onClick={this.AddToCart.bind(this, row.id,index)}   disabled={row.inCart}>
             {row.inCart ?"Already In Cart":"Add To Cart"}
-            </button>
+            </button></td>
+             </tr>
+             
+           </table>
+          
+
+         
 
            
-          </ul>
+        
         </div>
       );
     });
 
     return (
-      <div>
-          <h1><b>DIY Crafts</b></h1>
+      <div >
+     
         {this.state.showcomp ? passcmp : null}
-      
-       {this.state.count===0?<b>No items in cart</b> : <p><b>{this.state.count}</b></p>}
+        <div className="col-md-10">
+       {this.state.count===0?
+    <Badge variant="info"> <b>No items in cart</b></Badge> : <Badge variant="primary">{this.state.count} Items</Badge>}
     
-      
+      </div>
         <h1>{listitems}</h1>
       </div>
     );

@@ -102,9 +102,7 @@ if(listitemcart[index].Quantity>0)
            
             <tr>
              
-              <td>
-                <img src={item.img} />   
-              </td>
+             
              
               <td>{item.name}</td>
               <td>{item.price} S$</td>
@@ -148,11 +146,13 @@ if(listitemcart[index].Quantity>0)
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         ></link>
-
-        <span style={{ fontSize: 48 }} onClick={this.handleOpenModal.bind(this)} >
+ <div className="col-md-9">
+        <span  style={{ fontSize: 30 }} onClick={this.handleOpenModal.bind(this)} >
          <i className="fa fa-shopping-cart fa-lg m-2"> </i>
-         
+        
         </span>
+        </div>
+         
 
         <Modal
         size='lg'

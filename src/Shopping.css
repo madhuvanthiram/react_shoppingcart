@@ -1,22 +1,24 @@
 body{
-  font-size:10px;
-  font-family:sans-serif, 'Times New Roman', Times, serif
+  font-size:5px;
+  font-family:'Segoe UI';
+
 }
 
+table {
 
-ul.items {
+  width: 50%;
+  font-size:15px;
+  margin:30px;
+}
+
+th, td {
  
-  list-style-type: none;
- 
+  text-align: left;
+  padding: 10px;
 }
 
-img{
-  width: 20%;
-  
-}
-table tr td
-{
-  width: 40%;
-  padding:5px;
-}
+
+
+
+
 
