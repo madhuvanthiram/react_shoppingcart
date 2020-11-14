@@ -46,15 +46,16 @@ state = {
 
   handledelete(index) {
    
- const listitemcart = this.props.myarray;
+ const deletecart = this.props.myarray;
 
-listitemcart[index].inCart=false;
-    listitemcart.splice(index, 1);
-  
+ deletecart[index].inCart=false;
+ deletecart[index].Quantity=0;
+ deletecart.splice(index, 1);
+ 
     this.props.formatcount();
   
     this.setState((state) => {
-      return { myarray: listitemcart };
+      return { myarray: deletecart };
     });
   }
 
@@ -87,6 +88,7 @@ if(listitemcart[index].Quantity>0)
    
     const { myarray } = this.props;
     const {setShowmodal}=this.props;
+   
   
     let amountToPay = 0;
     for (let i=0; i<this.props.myarray.length; i++) {

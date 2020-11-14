@@ -47,7 +47,7 @@ class ShoppingCart extends Component {
  
     this.setState({ count: this.state.count + 1 });
     const list = this.state.Shoppinglist.find((item) => item.id === id);
-  
+
     list.inCart=true;
     const newnewlistcart = this.state.newcart.push(list);
     
@@ -57,6 +57,8 @@ class ShoppingCart extends Component {
   formatCount = () => {
    
     this.setState({ count: this.state.count - 1 });
+  
+
   };
 
   hideModal = () => {
