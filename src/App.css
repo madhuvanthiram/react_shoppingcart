@@ -2,11 +2,26 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+table.items {
+  display: flex;
 
+  margin: 10px;
+  align-items: left;
+  justify-content: left;
+  font-size: 14px;
+  color: black;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,3 +51,4 @@
     transform: rotate(360deg);
   }
 }
+

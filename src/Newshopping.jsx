@@ -5,7 +5,7 @@ import ModalHeader from "react-bootstrap/ModalHeader";
 import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Shopping.css";
+import "./App.css";
 import Badge from 'react-bootstrap/Badge'
 
 
@@ -146,7 +146,7 @@ if(listitemcart[index].Quantity>0)
         <Modal
   
           show={setShowmodal}
-        
+         size="lg"
           onHide={this.handleCloseModal.bind(this)}
         
         >

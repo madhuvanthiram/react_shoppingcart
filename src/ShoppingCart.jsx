@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Shopping.css";
+import "./App.css";
 import Badge from 'react-bootstrap/Badge'
 
 import Newshopping from "./Newshopping";
