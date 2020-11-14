@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Shopping.css";
 import Badge from 'react-bootstrap/Badge'
 
+
+
 class Newshopping extends Component {
 
 state = {
@@ -142,8 +144,9 @@ if(listitemcart[index].Quantity>0)
          <div>
 
         <Modal
-        size='lg'
+  
           show={setShowmodal}
+        
           onHide={this.handleCloseModal.bind(this)}
         
         >
