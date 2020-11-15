@@ -5,8 +5,8 @@ import ModalHeader from "react-bootstrap/ModalHeader";
 import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
 import "./App.css";
-import Badge from 'react-bootstrap/Badge'
-
+import Badge from 'react-bootstrap/Badge';
+import Table from 'react-bootstrap/Table'
 
 
 class Newshopping extends Component {
@@ -99,8 +99,8 @@ if(listitemcart[index].Quantity>0)
       return (
         <div key={item.id}>
 
-          <table>
-           
+<Table responsive="md" borderless>
+<thead>
             <tr>
              
              
@@ -116,7 +116,7 @@ if(listitemcart[index].Quantity>0)
 
 
               <td>
-                <button  className="btn btn-info m-2" onClick={this.handleClickDecrement.bind(this, index)}>
+                <button  className="btn btn-info " onClick={this.handleClickDecrement.bind(this, index)}>
                 <i className="fa fa-minus-circle" aria-hidden="true" />
                 </button>
               </td>
@@ -125,17 +125,16 @@ if(listitemcart[index].Quantity>0)
             
               <td>
                
-                <link
-                  rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-                ></link>
-                <span style={{ fontSize: 12 }} className="btn btn-danger" onClick={this.handledelete.bind(this, index)}>
-                  <i className="fa fa-trash-o" aria-hidden="true"/>
+               
+                <span style={{ fontSize: 10 }} className="btn btn-danger" onClick={this.handledelete.bind(this, index)}>
+                  <i className="fa fa-trash-o" />
                 </span> 
                
               </td>
             </tr>
-          </table>
+            </thead>
+          </Table>
+
         </div>
       );
     });
@@ -147,7 +146,7 @@ if(listitemcart[index].Quantity>0)
         <Modal
   
           show={setShowmodal}
-         dialogClassName={"primaryModal"}
+        
           onHide={this.handleCloseModal.bind(this)}
            centered
         

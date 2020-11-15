@@ -92,7 +92,7 @@ class ShoppingCart extends Component {
                <td >{row.name}</td>
                <td >{row.price}SGD</td>
                <td> {row.inCart}</td>
-               
+                
              <td> <button className="btn btn-primary m-2" onClick={this.AddToCart.bind(this, row.id,index)}   disabled={row.inCart}>
             {row.inCart ?"Already In Cart":"Add To Cart"}
             </button></td>

@@ -20,7 +20,7 @@ table.items {
 table.items th,
 td {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -42,10 +42,7 @@ td {
 .App-link {
   color: #61dafb;
 }
-.primaryModal
-{
-position: fixed;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -55,3 +52,4 @@ position: fixed;
     transform: rotate(360deg);
   }
 }
+
