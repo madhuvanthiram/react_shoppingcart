@@ -17,7 +17,7 @@ table.items {
   color: black;
 }
 
-th,
+table.items th,
 td {
   text-align: center;
   padding: 10px;
@@ -42,6 +42,10 @@ td {
 .App-link {
   color: #61dafb;
 }
+.primaryModal
+{
+position: fixed;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -51,4 +55,3 @@ td {
     transform: rotate(360deg);
   }
 }
-

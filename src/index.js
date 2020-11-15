@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import ShoppingCart from './ShoppingCart'
+
+import "bootstrap/dist/css/bootstrap.css";
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

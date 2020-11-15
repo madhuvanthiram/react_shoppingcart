@@ -4,7 +4,6 @@ import ModalBody from "react-bootstrap/ModalBody";
 import ModalHeader from "react-bootstrap/ModalHeader";
 import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Badge from 'react-bootstrap/Badge'
 
@@ -148,8 +147,9 @@ if(listitemcart[index].Quantity>0)
         <Modal
   
           show={setShowmodal}
-         size="lg"
+         dialogClassName={"primaryModal"}
           onHide={this.handleCloseModal.bind(this)}
+           centered
         
         >
           <ModalHeader closeButton>
