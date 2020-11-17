@@ -17,14 +17,14 @@ class ShoppingCart extends Component {
         id: 1,
         name: "Item1",
         price: "10",
-        Quantity: 0,
+        Quantity: 1,
         inCart: false,
       },
       {
         id: 2,
         name: "Item2",
         price: "15",
-        Quantity: 0,
+        Quantity: 1,
         inCart: false,
       },
 
@@ -32,7 +32,7 @@ class ShoppingCart extends Component {
         id: 3,
         name: "Item3",
         price: "26",
-        Quantity: 0,
+        Quantity: 1,
         inCart: false,
       },
 

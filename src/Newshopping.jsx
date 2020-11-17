@@ -48,7 +48,7 @@ state = {
  const deletecart = this.props.myarray;
 
  deletecart[index].inCart=false;
- deletecart[index].Quantity=0;
+ deletecart[index].Quantity=1;
  deletecart.splice(index, 1);
  
     this.props.formatcount();
@@ -66,7 +66,7 @@ state = {
   handleClickDecrement(index) {
    
     const listitemcart = this.props.myarray;
-if(listitemcart[index].Quantity>0)
+if(listitemcart[index].Quantity>1)
 {
     listitemcart[index].Quantity -= 1;
 }
@@ -99,7 +99,7 @@ if(listitemcart[index].Quantity>0)
       return (
         <div key={item.id}>
 
-<Table responsive="md" borderless>
+<Table responsive="sm" borderless>
 <thead>
             <tr>
              
@@ -146,7 +146,7 @@ if(listitemcart[index].Quantity>0)
         <Modal
   
           show={setShowmodal}
-        
+        size="lg"
           onHide={this.handleCloseModal.bind(this)}
            centered
         
